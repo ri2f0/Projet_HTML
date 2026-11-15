@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - France Casino</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/commun.js" defer></script>
+</head>
+<body class="accueil">
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header>
+    <a class="logo" href="index.html">♠ France Casino</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="blackjack.html">Blackjack</a>
+      <a href="roulette.html">Roulette</a>  
+      <a href="poker.html">Poker</a>
+      <a href="apropos.html" aria-current="page">A propos</a>
+    </nav>
+    <p class="solde"> Solde : <strong id="solde">1 000</strong> jetons</p>
+  </header>
+  <main id="contenu">
+    <h1>À propos de France Casino</h1>
+    <section>
+      <h2>Le projet</h2>
+      <p>France Casino est un projet étudiant de programmation web réalisé à l’EFREI par Jean-Baptiste et Nohlan.</p>
+      <p>Le site utilise HTML pour les pages, CSS pour la présentation et JavaScript pour les jeux. Il ne contient aucune bibliothèque externe.</p>
+    </section>
+    <section>
+      <h2>Les membres</h2>
+      <table>
+        <caption>Répartition du travail</caption>
+        <thead><tr><th scope="col">Prénom</th><th scope="col">Contribution</th></tr></thead>
+        <tbody>
+          <tr><td>Jean-Baptiste</td><td>Conception, règles des jeux.</td></tr>
+          <tr><td>Nohlan</td><td>Écriture de la maquette, design.</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Fonctionnement</h2>
+      <p>Les jetons sont fictifs. Le solde est conservé dans ce navigateur. Une manche quittée avant son résultat est annulée sans effet sur le solde.</p>
+      <p>Pour partager le solde entre les pages, ouvrez le site avec un serveur local et jouez dans un seul onglet.</p>
+    </section>
+    <section>
+      <h2>Ressources</h2>
+      <p>Ce projet a été préparé avec une assistance de génération de code (ChatGPT) pour servir de modèle d’apprentissage. Nous avons utilisé l'IA afin de mieux comprendre les commandes que nous utilisions, de corriger nos éventuelles erreurs de code et de rendre plus agréable l'expérience de jeu.</p>
+      <p>Le site utilise les polices du navigateur et des symboles de cartes. Aucune image externe n’est nécessaire.</p>
+    </section>
+  </main>
+  <footer>
+    <button id="recharger" type="button" disabled>Recevoir 1 000 jetons</button>
+    <p>Recharge disponible sous 1 jeton, en dehors d’une manche.</p>
+    <p id="sauvegarde">Seul le solde est sauvegardé. Jouez dans un seul onglet.</p>
+    <nav aria-label="Navigation de pied de page">
+      <a href="index.html"> Accueil</a>
+      <a href="apropos.html"> A propos</a>
+    </nav>
+    <p>Jean-Baptiste et Nohlan · Projet étudiant · Jetons fictifs, sans argent réel</p>
+  </footer>
+</body>
+</html>

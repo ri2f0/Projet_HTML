@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack français - France Casino</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/commun.js" defer></script>
+  <script src="../js/cartes.js" defer></script>
+  <script src="../js/blackjack.js" defer></script>
+</head>
+<body class="blackjack">
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header>
+    <a class="logo" href="index.html">♠ France Casino</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="blackjack.html" aria-current="page">Blackjack</a>
+      <a href="roulette.html">Roulette</a>
+      <a href="poker.html">Poker</a>
+      <a href="apropos.html">A propos</a>
+    </nav>
+    <p class="solde">Solde : <strong id="solde">1 000</strong> jetons</p>
+  </header>
+  <main id="contenu">
+    <h1>Blackjack français simplifié</h1>
+    <p>Obtenez un meilleur total que le croupier sans dépasser 21.</p>
+    <section class="tapis">
+      <h2>Le croupier</h2>
+      <div id="main-croupier" class="main-cartes"></div>
+      <p id="score-croupier">En attente de distribution.</p>
+      <h2>Votre main</h2>
+      <div id="main-joueur" class="main-cartes"></div>
+      <p id="score-joueur">Vos cartes apparaîtront ici.</p>
+    </section>
+    <section>
+      <h2>Vos actions</h2>
+      <form id="formulaire">
+        <label for="mise">Mise en jetons</label>
+        <input id="mise" type="number" min="1" step="1" value="10" required>
+        <button id="distribuer" type="submit">Distribuer les cartes</button>
+      </form>
+      <div class="actions">
+        <button id="tirer" type="button" disabled>Tirer une carte</button>
+        <button id="rester" type="button" disabled>Rester</button>
+      </div>
+      <p id="message" class="message" role="status">Choisissez une mise pour commencer.</p>
+      <p class="aide">Vous êtes seul contre le croupier. Avant de commencer, voici quelques règles à connaître.</p>
+    </section>
+    <section>
+      <h2>Règles du blackjack</h2>
+        <ol> 
+
+            <li>Le but du jeu et les valeurs des cartes : 
+
+            <ul> 
+
+                <li>Le but du jeu est d'obtenir un score supérieur à celui du croupier sans dépasser 21.</li> 
+
+                <li>Les cartes de 2 à 10 valent leur valeur nominale, les figures (Valet, Dame, Roi) valent 10 et l'As vaut 1 ou 11 selon ce qui est le plus avantageux pour le joueur.</li> 
+
+                <li>Si vous dépassez 21, vous perdez automatiquement la partie.</li> 
+
+            </ul>
+            </li> 
+
+            <li>Déroulement d'une partie : 
+
+            <ul> 
+
+                <li>Vous avez deux cartes en main au début de la partie.</li> 
+
+                <li>Vous pouvez choisir de prendre une carte (Hit) ou de ne plus prendre de carte (Stand).</li> 
+
+                <li>Si vous décidez de prendre une carte, le croupier vous en donne une.</li> 
+
+                <li>Si vous décidez de ne plus prendre de carte, le croupier joue à son tour.</li> 
+
+                <li>Le croupier doit prendre une carte s'il a 16 ou moins, et s'arrêter s'il a 17 ou plus.</li> 
+
+            </ul>
+            </li> 
+
+            <li>Gain et perte : 
+
+            <ul> 
+
+                <li>Si vous obtenez un score supérieur à celui du croupier sans dépasser 21, votre gain net est égal à votre mise.</li> 
+
+                <li>Si le croupier obtient un score supérieur à 21, votre gain net est égal à votre mise.</li> 
+
+                <li>Si vous dépassez 21, vous perdez votre mise.</li> 
+
+                <li>Si vous faites un black jack (21 avec les deux premières cartes) et que le croupier n’en a pas, votre gain net est égal à 1,5 fois votre mise. Un blackjack bat un 21 obtenu avec plus de deux cartes. En cas d’égalité, votre mise est conservée.</li> 
+
+            </ul>
+            </li> 
+
+        </ol>
+    </section>
+
+
+  </main>
+
+  <!-- Gestion des jetons et navigation secondaire -->
+  <footer>
+    <button id="recharger" type="button" disabled>Recevoir 1 000 jetons</button>
+    <p>Recharge disponible sous 1 jeton, en dehors d’une manche.</p>
+    <p id="sauvegarde">Seul le solde est sauvegardé. Jouez dans un seul onglet.</p>
+    <nav aria-label="Navigation de pied de page">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+    </nav>
+    <p>Jean-Baptiste et Nohlan · Projet étudiant · Jetons fictifs, sans argent réel</p>
+  </footer>
+</body>
+</html>

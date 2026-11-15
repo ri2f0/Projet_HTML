@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poker - France Casino</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/commun.js" defer></script>
+  <script src="../js/cartes.js" defer></script>
+  <script src="../js/combinaisons.js" defer></script>
+  <script src="../js/poker.js" defer></script>
+</head>
+<body class="poker">
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header>
+    <a class="logo" href="index.html">♠ France Casino</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="blackjack.html">Blackjack</a>
+      <a href="roulette.html">Roulette</a>
+      <a href="poker.html" aria-current="page">Poker</a>
+      <a href="apropos.html">A propos</a>
+    </nav>
+    <p class="solde">Solde : <strong id="solde">1 000</strong> jetons</p>
+  </header>
+  <main id="contenu">
+    <h1>Poker à cinq cartes</h1>
+    <p>Une version simplifiée : une mise et un échange, sans relance.</p>
+    <section class="tapis">
+      <h2>L’adversaire</h2>
+      <div id="main-adversaire" class="main-cartes"></div>
+      <h2>Votre main</h2>
+      <div id="main-joueur" class="main-cartes"></div>
+      <p id="combinaison">En attente de distribution.</p>
+    </section>
+    <section>
+      <h2>Vos actions</h2>
+      <form id="formulaire">
+        <label for="mise">Mise en jetons</label>
+        <input id="mise" type="number" min="1" step="1" value="10" required>
+        <button id="distribuer" type="submit">Distribuer les cartes</button>
+      </form>
+      <fieldset>
+        <legend>Cartes à remplacer (de gauche à droite)</legend>
+        <label><input id="carte-0" type="checkbox" disabled> Carte 1</label>
+        <label><input id="carte-1" type="checkbox" disabled> Carte 2</label>
+        <label><input id="carte-2" type="checkbox" disabled> Carte 3</label>
+        <label><input id="carte-3" type="checkbox" disabled> Carte 4</label>
+        <label><input id="carte-4" type="checkbox" disabled> Carte 5</label>
+      </fieldset>
+      <button id="echanger" type="button" disabled>Valider mon choix</button>
+      <p id="message" class="message" role="status">Distribuez les cartes pour commencer.</p>
+      <p class="aide">Le solde est calculé à la fin. Quitter ou recharger la page annule la manche sans modifier votre solde.</p>
+    </section>
+    <section>
+      <h2>Règles du poker</h2>
+      <ol>
+        <li>Vous et l’adversaire recevez cinq cartes.</li>
+        <li>Cochez les cartes à remplacer, puis validez. Ne cochez rien pour tout garder.</li>
+        <li>L’adversaire conserve ses cinq cartes de départ.</li>
+        <li>Les mains sont comparées. Une victoire rapporte la mise en gain net ; une défaite la retire ; une égalité ne change rien.</li>
+      </ol>
+      <details>
+        <summary>Classement des combinaisons, de la plus faible à la plus forte</summary>
+        <ul> 
+
+                <li>Le but du jeu est d'avoir la meilleure main possible à la fin de la partie.</li> 
+
+                <li>Les mains sont classées de la plus faible à la plus forte : carte haute, paire, double paire, brelan, quinte, couleur, full, carré, quinte flush et quinte flush royale.</li> 
+
+            </ul> 
+        <p>À combinaison égale, on compare d’abord les groupes, puis les cartes restantes. L’as peut être bas dans A-2-3-4-5.</p>
+      </details>
+    </section>
+
+  </main>
+  <footer>
+    <button id="recharger" type="button" disabled>Recevoir 1 000 jetons</button>
+    <p>Recharge disponible sous 1 jeton, en dehors d’une manche.</p>
+    <p id="sauvegarde">Seul le solde est sauvegardé. Jouez dans un seul onglet.</p>
+    <nav aria-label="Navigation de pied de page">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+    </nav>
+    <p>Jean-Baptiste et Nohlan · Projet étudiant · Jetons fictifs, sans argent réel</p>
+  </footer>
+</body>
+</html>

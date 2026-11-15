@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roulette - France Casino</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/commun.js" defer></script>
+  <script src="../js/roulette.js" defer></script>
+</head>
+<body class="roulette">
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- En-tête commun aux cinq pages -->
+  <header>
+    <a class="logo" href="index.html">♠ France Casino</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="blackjack.html">Blackjack</a>
+      <a href="roulette.html" aria-current="page">Roulette</a>
+      <a href="poker.html">Poker</a>
+      <a href="apropos.html">A propos</a>
+    </nav>
+    <p class="solde">Solde : <strong id="solde">1 000</strong> jetons</p>
+  </header>
+
+  <main id="contenu">
+    <h1>Roulette européenne</h1>
+    <p>Un pari, un tirage, un résultat.</p>
+
+    <section class="tapis">
+      <h2>Le numéro tiré</h2>
+      <p id="resultat" class="numero">?</p>
+    </section>
+
+    <section>
+      <h2>Votre pari</h2>
+      <form id="formulaire">
+        <label for="mise">Mise en jetons</label>
+        <input id="mise" type="number" min="1" step="1" value="10" required>
+        <label for="pari">Type de pari</label>
+        <select id="pari">
+          <option value="rouge">Rouge</option>
+          <option value="noir">Noir</option>
+          <option value="pair">Pair</option>
+          <option value="impair">Impair</option>
+          <option value="numero">Numéro exact</option>
+        </select>
+        <div id="choix-numero" hidden>
+          <label for="numero">Numéro entre 0 et 36</label>
+          <input id="numero" type="number" min="0" max="36" step="1" value="7" required disabled>
+        </div>
+        <button type="submit">Lancer la roulette</button>
+      </form>
+      <p id="message" class="message">Choisissez une mise et un pari.</p>
+    </section>
+    <section>
+      <h2>Règles de la roulette</h2>
+      <ol> 
+
+            <li>Le but du jeu : 
+
+            <ul> 
+
+                <li>Le but du jeu est de parier sur le nombre sur lequel la boule s'arrêtera.</li> 
+
+            </ul>
+            </li> 
+
+            <li>Les types de paris : 
+
+            <ul> 
+
+                <li>Vous pouvez parier sur un nombre spécifique.</li> 
+
+                <li>Vous pouvez parier sur la couleur.</li> 
+
+                <li>Vous pouvez parier sur la parité.</li> 
+
+            </ul>
+            </li> 
+
+            <li>Gain et perte : 
+
+            <ul> 
+
+                <li>Si vous pariez sur un nombre spécifique et qu'il sort, votre gain net est égal à 35 fois votre mise.</li> 
+
+                <li>Si vous pariez sur la couleur et que la couleur sort, votre gain net est égal à votre mise.</li> 
+
+                <li>Si vous pariez sur la parité et que la parité sort, votre gain net est égal à votre mise.</li> 
+
+                <li>Sinon vous perdez votre mise. Le zéro fait perdre les paris sur la couleur et la parité.</li> 
+
+            </ul>
+            </li> 
+
+        </ol> 
+    </section>
+
+
+
+
+  </main>
+  <footer>
+    <button id="recharger" type="button" disabled>Recevoir 1 000 jetons</button>
+    <p>Recharge disponible sous 1 jeton, en dehors d’une manche.</p>
+    <p id="sauvegarde">Seul le solde est sauvegardé. Jouez dans un seul onglet.</p>
+    <nav aria-label="Navigation de pied de page">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+    </nav>
+    <p>Jean-Baptiste et Nohlan · Projet étudiant · Jetons fictifs, sans argent réel</p>
+  </footer>
+</body>
+</html>
